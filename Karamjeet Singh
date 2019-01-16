@@ -1,0 +1,57 @@
+#itertools.permutations()
+
+#Task
+
+#You are given a string . 
+#Your task is to print all possible permutations of size  of the string in lexicographic sorted order.
+
+#Input Format
+
+#A single line containing the space separated string  and the integer value .
+
+#Constraints
+
+ 
+#The string contains only UPPERCASE characters.
+
+#Output Format
+
+#Print the permutations of the string  on separate lines.
+
+#Sample Input
+
+#HACK 2
+#Sample Output
+
+#AC
+#AH
+#AK
+#CA
+#CH
+#CK
+#HA
+#HC
+#HK
+#KA
+#KC
+#KH
+#Explanation
+
+#All possible size  permutations of the string "HACK" are printed in lexicographic sorted order.
+
+******************************************************************************************************************************************************************************************************
+
+import itertools                                             #import the itertools module
+token=input().split()                                        #taking input in splits that is like Aman Singh to Aman,Singh here HACK 2 to HACK,2
+x=list(itertools.permutations(token[0],int(token[1])))       #making a list using permutations funct in module itertools and (token[0] represents HACK and 2 token[1] represents 2
+x.sort()                                                     # list method to sort the elements
+for i in range(len(x)):                                      #for loop to iterate across the list 
+    for j in range(int(token[1])):                           #another loop for inside of for tuples like (A,K)
+        print(x[i][j],end="")                                #printing using i and j with end="" so that it doesnot changed the length
+    print()                                                  #to change length after every for loop of j is over 
+   
+ *****************************************************************************************************************************************************************************************************  
+    
+
+
+
